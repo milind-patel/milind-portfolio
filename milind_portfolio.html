@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milind Patel - Engineering Manager | AI & Security Specialist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header h2 {
+            font-size: 1.5em;
+            font-weight: 300;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.1);
+            padding: 10px 20px;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 50px;
+        }
+        
+        .section-title {
+            font-size: 2em;
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            display: inline-block;
+        }
+        
+        .summary {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .skill-category {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .skill-category h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        .skill-category ul {
+            list-style: none;
+        }
+        
+        .skill-category li {
+            padding: 5px 0;
+            color: #666;
+        }
+        
+        .skill-category li:before {
+            content: "▹ ";
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .experience-item {
+            background: #f8f9fa;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .experience-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(102,126,234,0.2);
+        }
+        
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .experience-title {
+            font-size: 1.4em;
+            color: #333;
+            font-weight: 600;
+        }
+        
+        .experience-company {
+            color: #667eea;
+            font-size: 1.1em;
+            margin-top: 5px;
+        }
+        
+        .experience-date {
+            color: #999;
+            font-size: 0.9em;
+        }
+        
+        .experience-item ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+        
+        .experience-item li {
+            padding: 8px 0;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .experience-item li:before {
+            content: "✓ ";
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        
+        .achievements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .achievement-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .achievement-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .achievement-icon {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        
+        .achievement-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .achievement-description {
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+        
+        .links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .link-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .link-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(102,126,234,0.4);
+        }
+        
+        .download-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 5px 20px rgba(102,126,234,0.4);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .download-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .header h2 {
+                font-size: 1.2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+            }
+            
+            .download-btn {
+                bottom: 15px;
+                right: 15px;
+                padding: 12px 20px;
+            }
+        }
+        
+        .footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .footer p {
+            margin: 5px 0;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Milind Patel</h1>
+            <h2>Engineering Manager | AI & Security Architecture Specialist</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    📍 Tsukuba, Ibaraki, Japan
+                </div>
+                <div class="contact-item">
+                    📞 <a href="tel:+81709402509">070-9040-2509</a>
+                </div>
+                <div class="contact-item">
+                    ✉️ <a href="mailto:66.milind@gmail.com">66.milind@gmail.com</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="content">
+            <!-- Professional Summary -->
+            <section class="section">
+                <h2 class="section-title">Professional Summary</h2>
+                <div class="summary">
+                    Results-driven Engineering Manager with <strong>10+ years</strong> of experience leading cross-functional teams and driving digital transformation in Japan's tech landscape. Specializing in strategic security architecture, AI-powered automation, and agile process optimization. Proven track record in designing and implementing <strong>RAG-based internal knowledge chatbots</strong> and intelligent workflow systems that enhance team-wide productivity.
+                </div>
+            </section>
+
+            <!-- Key Achievements -->
+            <section class="section">
+                <h2 class="section-title">Key Achievements</h2>
+                <div class="achievements">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">🚀</div>
+                        <div class="achievement-title">AI Innovation</div>
+                        <div class="achievement-description">Designed RAG-based internal knowledge chatbot, revolutionizing information access</div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">🔐</div>
+                        <div class="achievement-title">Security Leadership</div>
+                        <div class="achievement-description">Defined comprehensive security roadmap covering authentication, data protection, compliance</div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">⚡</div>
+                        <div class="achievement-title">Process Optimization</div>
+                        <div class="achievement-description">Achieved 30% improvement in delivery efficiency through agile optimization</div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">👥</div>
+                        <div class="achievement-title">Team Growth</div>
+                        <div class="achievement-description">Mentored 15+ engineers, with 5 promoted to senior/lead positions</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Core Skills -->
+            <section class="section">
+                <h2 class="section-title">Core Expertise</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Leadership & Management</h3>
+                        <ul>
+                            <li>Team Building & Mentorship</li>
+                            <li>Agile Process Optimization</li>
+                            <li>Strategic Planning</li>
+                            <li>Cross-functional Collaboration</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>AI & Automation</h3>
+                        <ul>
+                            <li>RAG Systems</li>
+                            <li>AI Chatbot Development</li>
+                            <li>LLM Integration</li>
+                            <li>Cursor & Claude Code</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Backend & APIs</h3>
+                        <ul>
+                            <li>Ruby on Rails</li>
+                            <li>REST/GraphQL APIs</li>
+                            <li>Microservices</li>
+                            <li>API Gateways</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Cloud & Infrastructure</h3>
+                        <ul>
+                            <li>AWS</li>
+                            <li>DevOps & CI/CD</li>
+                            <li>Infrastructure Management</li>
+                            <li>Deployment Automation</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Databases</h3>
+                        <ul>
+                            <li>PostgreSQL</li>
+                            <li>MongoDB</li>
+                            <li>NoSQL Design</li>
+                            <li>Database Optimization</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Security</h3>
+                        <ul>
+                            <li>Security Architecture</li>
+                            <li>Security Roadmaps</li>
+                            <li>Secure System Design</li>
+                            <li>Compliance</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Professional Experience -->
+            <section class="section">
+                <h2 class="section-title">Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">Engineering Manager</div>
+                            <div class="experience-company">Vebuin Pvt Ltd, Japan</div>
+                        </div>
+                        <div class="experience-date">May 2023 – Present</div>
+                    </div>
+                    <ul>
+                        <li>Lead engineering teams in agile optimization, delivering 30% improvement in project efficiency</li>
+                        <li>Architected and deployed RAG-based AI knowledge chatbot, boosting team productivity significantly</li>
+                        <li>Integrated LINE App Directory for automated business workflows</li>
+                        <li>Leverage Cursor & Claude Code for AI-assisted development, enhancing code quality and speed</li>
+                        <li>Define strategic security roadmaps and implement architecture-level transformations</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">Team Lead</div>
+                            <div class="experience-company">Vebuin Pvt Ltd, Japan</div>
+                        </div>
+                        <div class="experience-date">May 2022 – April 2023</div>
+                    </div>
+                    <ul>
+                        <li>Led cross-functional teams of 10+ developers, designers, and QA professionals</li>
+                        <li>Managed end-to-end project lifecycles with 100% on-time delivery rate</li>
+                        <li>Established coding standards and best practices across engineering organization</li>
+                        <li>Mentored junior engineers, promoting technical growth and career development</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">Sr. Full Stack Engineer</div>
+                            <div class="experience-company">ThinkBiz Technology, India</div>
+                        </div>
+                        <div class="experience-date">Nov 2016 – July 2018</div>
+                    </div>
+                    <ul>
+                        <li>Owned complete feature lifecycle from requirements to deployment</li>
+                        <li>Coordinated between business and development teams for optimal technical solutions</li>
+                        <li>Built scalable web applications using Ruby on Rails and modern frontend frameworks</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">Full Stack Engineer</div>
+                            <div class="experience-company">Sasa Software Technology, India</div>
+                        </div>
+                        <div class="experience-date">May 2015 – Oct 2016</div>
+                    </div>
+                    <ul>
+                        <li>Developed large-scale SaaS application with Ruby on Rails and AngularJS</li>
+                        <li>Integrated critical payment gateways: Stripe, Recurly, Authorize.net</li>
+                        <li>Optimized deployment processes using webpack and modern DevOps practices</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">Software Engineer</div>
+                            <div class="experience-company">RapidOps Software Technology, India</div>
+                        </div>
+                        <div class="experience-date">Aug 2012 – April 2015</div>
+                    </div>
+                    <ul>
+                        <li>Built invoice management systems with payment gateway integration</li>
+                        <li>Developed MongoDB applications with NodeJS backend</li>
+                        <li>Deployed applications to AWS using Capistrano and Mina</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">Bachelor of Engineering in Computer Science</div>
+                            <div class="experience-company">Visvesvaraya Technical University, Karnataka, India</div>
+                        </div>
+                        <div class="experience-date">2012</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Professional Links -->
+            <section class="section">
+                <h2 class="section-title">Professional Links</h2>
+                <div class="links">
+                    <a href="https://www.linkedin.com/in/milind0708/" target="_blank" class="link-button">🔗 LinkedIn</a>
+                    <a href="https://github.com/milind-patel" target="_blank" class="link-button">💻 GitHub</a>
+                    <a href="https://rubygems.org/gems/world-postalcodes" target="_blank" class="link-button">📦 Ruby Gem</a>
+                    <a href="https://line.worksmobile.com/jp/appdirectory/smartflow/" target="_blank" class="link-button">🔗 LINE App Directory</a>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <p><strong>Milind Patel</strong> - Engineering Manager</p>
+            <p>📍 Tsukuba, Japan | 📞 070-9040-2509 | ✉️ 66.milind@gmail.com</p>
+            <p style="margin-top: 15px; font-size: 0.9em;">© 2026 Milind Patel. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <a href="#" class="download-btn" onclick="window.print(); return false;">📄 Download PDF</a>
+</body>
+</html>
